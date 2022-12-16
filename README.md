@@ -2,11 +2,13 @@
 
 Wraps rust function using C bindings. Allowing to execute Polywrap Client through Swift.
 
-- Depends on rust client FFI C bindings
+### Contribute
+
+- Depends on https://github.com/polywrap/rust-client/tree/develop/packages/ffi-c
 
 In order to run:
-- Download rust client and build `ffi-swift` package
-- Make sure you have cbingen downloaded and run in `ffi-swift` package
-`cbindgen --config cbindgen.toml --crate polywrap_ffi_swift_client --output ../../../swift/PolywrapClient/FfiClient/include/header.h --lang c`
-- Go to `FfiSwiftWrapper` and run `./build_framework.sh` - You'll probably need to give permissions to file
-- Once you have the `client.xcframework, you will be able to build the `PolywrapClient`
+- You will need to download the rust-client repository, the `ffi-c` package, if you do changes you will need to follow the
+instructions from readme there in order to update headers and dynamic library
+- Build it and move the new generated files to `include` folder
+- Go to `FfiSwiftWrapper` and run `./build_framework.sh` - You'll probably need to give permissions to file with `chmod +x`
+- Once you have the `client.xcframework`, you will be able to build the `PolywrapClient`
