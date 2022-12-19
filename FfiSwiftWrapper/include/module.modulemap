@@ -1,4 +1,4 @@
 module FfiSwiftWrapper {
-    umbrella header "headers.hpp"
+    umbrella header "header.h"
     export *
 }
